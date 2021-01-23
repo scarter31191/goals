@@ -9,7 +9,7 @@ class GoalsController < ApplicationController
     end
 
     def create
-        @goal = Goal.new(params.require(:goal).permit(:name, :goal_date))
+        @goal = Goal.new(goal_params(:name, :goal_date))
         @goal.save
         redirect_to goal_path(@goal)
     end
@@ -20,5 +20,12 @@ class GoalsController < ApplicationController
 
     def edit
 
+    end
+
+
+    private
+
+    def goal_params(*args)
+        params.require(:goal).permit(*args)
     end
 end
