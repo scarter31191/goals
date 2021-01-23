@@ -11,7 +11,7 @@ class GoalsController < ApplicationController
     def create
         @goal = Goal.new(goal_params(:name, :goal_date))
         @goal.save
-        redirect_to goal_path(@goal)
+        redirect_to goals_path(@goal)
     end
 
     def show
@@ -26,7 +26,12 @@ class GoalsController < ApplicationController
         @goal = Goal.find(params[:id])
         @goal.update(goal_params(:name, :goal_date))
         redirect_to goal_path(@goal)
-      end
+    end
+
+    def destroy
+        @goal = Goal.find(params[:id]).destroy
+        redirect_to goals_url
+    end
 
 
     private
