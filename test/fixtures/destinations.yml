@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  description: MyText
+  date_traveled: 2021-01-20
+  goal_reached: false
+  traveler_id: 1
+  goal_id: 1
+
+two:
+  location: MyString
+  description: MyText
+  date_traveled: 2021-01-20
+  goal_reached: false
+  traveler_id: 1
+  goal_id: 1
