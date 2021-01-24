@@ -1,1 +1,10 @@
 <h1> Destinations </h1>
+
+ <ul>
+        <% @destinations.each do |destination| %>
+        <li>
+        <%= link_to destination.location, destination_path(destination) %>
+        </li>
+        <%= link_to "Delete", destination, method: :delete, data: { confirm: "Really?" } %>
+    </ul>
+  <% end %>
