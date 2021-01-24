@@ -2,3 +2,6 @@
 
 <h2> <%= @destination.location %> </h2>
 <p> <%= @destination.description %> </p>
+
+<%= link_to "Edit Destination", edit_destination_path(@destination) %><br>
+<%= link_to "All Destinations", destinations_path %>
